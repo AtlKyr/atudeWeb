@@ -23,25 +23,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
+            height: 9vh;
+            padding: 1vh 1vw;
             background-color: #4a4a7d;
             color: #fff;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 2.2vw;
             font-weight: bold;
         }
 
         .nav-buttons {
+            height: 6vh;
             display: flex;
             gap: 15px;
             position: relative; /* Ensure dropdown is positioned relative to the button */
         }
 
         .nav-buttons button {
-            padding: 10px 20px;
-            font-size: 1rem;
+            
+            padding: 0vw 0vh;
+            font-size: 1.3vw;
             font-weight: bold;
             color: #fff;
             background: #6a6ab0;
@@ -49,10 +52,11 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background 0.3s ease;
+            text-align: center;
         }
 
         .nav-buttons button:hover {
-            background: #4a4a7d;
+            background: #52528f;
         }
 
         .dropdown {
@@ -94,6 +98,10 @@
         .hero {
             position: relative; /* Required for positioning the pseudo-element */
             text-align: center;
+            position: fixed;
+            height: 100vh; /* Full viewport height */
+            width: 100%;
+            top: 0;
             padding: 100px 20px;
             min-height: calc(100vh - 140px); /* Adjust for header and footer height */
             display: flex;
@@ -103,7 +111,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            z-index: 1; /* Ensure content is above the overlay */
+            z-index: -1; /* Ensure content is above the overlay */
         }
 
         .hero::before {
@@ -142,7 +150,7 @@
         .cta-button {
             display: block;
             margin: 0 auto;
-            width: 200px;
+            width: 20vw;
             padding: 10px 20px;
             font-size: 1rem;
             font-weight: bold;
@@ -177,7 +185,9 @@
             color: #aaa;
         }
 
-
+        .screenbuttons {
+            height: 20wh;
+        }
         .dropdown:hover {
        /*     display: block;  Show dropdown on hover */
             opacity: 1; /* Fade in effect */
@@ -225,7 +235,7 @@
             border-radius: 5px 5px 0px 0px; /* Rounded corners for the top */
         }
 
-
+        
 
     </style>
 </head>
@@ -233,25 +243,25 @@
     <header>
         <div class="logo">Atude</div>
         <div class="nav-buttons">
-            <button id="portButton">Portfolios</button>
+            <button style="width: 10vw;"  id="portButton">Portfolios</button>
             <div class="dropdown" id="PortfoliosDropdown">
                 <a href="#">AtlKyr</a>
                 <a href="#">Tugi</a>
                 <a href="#">Dean</a>
             </div>
-            <button onclick="alert('Store Section Coming Soon!')">Store</button>
-            <button onclick="alert('Learn More Section Coming Soon!')">Learn More</button>
+            <button style="width: 8vw;" onclick="alert('Store Section Coming Soon!')">Store</button>
+            <button style="width: 8vw;" onclick="alert('Learn More Section Coming Soon!')">Learn More</button>
         </div>
     </header>
 
     <section class="hero">
-        <h1>Welcome to Atude</h1>
-        <p>The trio of modern game development.</p>
+        <h1 style="font-size: 3.5vw;">Welcome to Atude</h1>
+        <p style="font-size: 1.4vw;">The trio of modern game development.</p>
         <button class="cta-button" onclick="alert('Contact Us Coming Soon!')">Our Works</button>
     </section>
 
     <footer>
-        <p>&copy; 2025 Atude. All rights reserved.</p>
+        <p style="z-index: 9999; display: block;">&copy; 2025 Atude. All rights reserved.</p>
     </footer>
 </body>
 </html>
